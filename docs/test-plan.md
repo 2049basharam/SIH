@@ -64,6 +64,13 @@ cmd.exe /c "set PYTHONPATH=.&& venv\Scripts\pytest --cov=app tests/"
   10. Coordinator shortlists and submits nominations.
   11. SPOC approves nominations and publishes final results.
 
+### 3.6. Playwright Frontend E2E Suite (`frontend/tests_e2e/auth.spec.ts`)
+- **Test Command**: `npx.cmd playwright test` *(run inside `frontend/`)*
+- **Verifies**:
+  - Landing pages load correctly with accurate text and neumorphic components.
+  - Smooth sliding transitions and height animations work on login/register toggles.
+  - Links properly route to the coordinator, judge, and SPOC portals.
+
 ---
 
 ## 4. Security Authorization Test Matrix
