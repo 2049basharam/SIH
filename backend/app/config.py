@@ -12,7 +12,9 @@ class Settings:
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./sih.db")
     
     # CORS
-    BACKEND_CORS_ORIGINS: List[str] = ["*"]
+    BACKEND_CORS_ORIGINS: List[str] = [
+        origin.strip() for origin in os.getenv("BACKEND_CORS_ORIGINS", "*").split(",") if origin.strip()
+    ]
     
     # SIH Synchronization Config
     SIH_SOURCE_URL: str = os.getenv("SIH_SOURCE_URL", "https://sih.gov.in/sih2025PS")
